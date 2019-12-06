@@ -39,6 +39,10 @@ cameraTrigger.onclick = function() {
             console.log("La foto fue enviada correctamente");
             $estado.innerHTML = "Foto guardada con éxito. Puedes verla <a target='_blank' href='./" + xhr.responseText + "'> aquí</a>";
         }
+        else {
+            console.log("La foto no se pudo enviar");
+        }
+            
     }
 
     // track.stop();
