@@ -30,7 +30,7 @@ cameraTrigger.onclick = function() {
     cameraOutput.classList.add("taken");
     var foto = cameraSensor.toDataURL();
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "./guardar_foto.php", true);
+    xhr.open("POST", "./foto.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.send(encodeURIComponent(foto)); //Codificar y enviar
  
