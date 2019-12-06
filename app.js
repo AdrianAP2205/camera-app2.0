@@ -26,7 +26,9 @@ cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    var foto = cameraSensor.toDataURL();
+    cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    cameraOutput.classList.add("taken");
+    var foto = cameraSensor.toDataURL("image/webp");
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "./foto.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
